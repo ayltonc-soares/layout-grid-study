@@ -1,0 +1,74 @@
+:root {
+    --radius-default: 0.5rem;
+    --gap-default: 0.62rem;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background:#F5F1F1;
+    font-family: 'Ubuntu', sans-serif;
+}
+.grid {
+    background:white;
+}
+
+
+.content {
+    max-width: 81rem;
+    width: 90%;
+    margin: 1.25rem auto;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "aside main main main"
+    "aside-dois main main main"
+    "footer footer footer footer";
+
+    grid-gap: var(--gap-default);
+
+    grid-auto-rows: 10vh 35vh 35vh 10vh;
+}
+
+.grid-header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-aside {
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3C0C0;
+    border-radius: var(--radius-default);
+}
+
+
+.grid-aside-dois {
+    grid-area: aside-dois;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFAA86;
+    border-radius: var(--radius-default);
+}
+
+.grid-main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-default);
+}
+.grid-footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
